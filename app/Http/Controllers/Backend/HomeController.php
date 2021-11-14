@@ -11,4 +11,8 @@ class HomeController extends Controller
     {
         return view('admin.content');
     }
+    public function dashboard()
+    {
+        return view ('admin.content');
+    }
 }

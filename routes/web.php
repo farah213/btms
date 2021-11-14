@@ -22,3 +22,4 @@ use App\Http\Controllers\Backend\RouteController;
 Route::get('/', [HomeController::class,'test']);
 Route::get('/bus', [BusController::class,'Bus'])->name('bus');
 Route::get('/route', [RouteController::class,'route'])->name('route');
+Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
