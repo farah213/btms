@@ -9,6 +9,6 @@ class BusController extends Controller
 {
     public function Bus()
     {
-        return view('admin.layout.buslist');
+        return view('admin.layout.bus');
     }
 }

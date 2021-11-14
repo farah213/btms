@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Backend\ContentController;
+use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\RouteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,8 @@ use App\Http\Controllers\Backend\RouteController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.content');
-// });
 
-Route::get('/', [ContentController::class,'test']);
-Route::get('/passengerlist',[ContentController::class,'passenger'])->name('passenger');
-Route::get('/buslist', [BusController::class,'Bus'])->name('Bus');
-Route::get('/bookinglist', [ContentController::class,'booking'])->name('booking');
-Route::get('/routelist', [RouteController::class,'Route'])->name('Route');
-Route::get('/reportlist', [ContentController::class,'report'])->name('report');
+
+Route::get('/', [HomeController::class,'test']);
+Route::get('/bus', [BusController::class,'Bus'])->name('bus');
+Route::get('/route', [RouteController::class,'route'])->name('route');

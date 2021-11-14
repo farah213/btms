@@ -1,11 +1,7 @@
 @extends('admin.master')
 
-@section('content')
-
-
-
-
-
+@section()
 
 
 @sectionend
+
