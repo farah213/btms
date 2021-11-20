@@ -24,21 +24,32 @@
                                 Dashboard
                             </a>
                             
-                            <a class="nav-link collapsed" href="#" >
+
+                            <a class="nav-link collapsed" href="{{route('userform')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
+                                User List
                                 
                             </a>
-                            
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
+                             <a class="nav-link collapsed" href="{{route('locationform')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Location
+                                
+                            </a>
+                            <a class="nav-link collapsed" href="{{route('locationlist')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Location list
+                                
+                            </a>
+                            <a class="nav-link collapsed" href="{{route('bus')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Bus
                                 
                             </a>
                               
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                            <a class="nav-link collapsed" href="{{route('bookingtable')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Booking table
+                                
                             </a>
                         </div>
                     </div>

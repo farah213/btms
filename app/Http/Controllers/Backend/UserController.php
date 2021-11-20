@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AddbusinfoController extends Controller
+class UserController extends Controller
 {
-    public function addbusinfo()
+    public function userform()
     {
-        return view('admin.layout.addbusinfo');
+        return view('admin.layout.userform');
     }
 }
