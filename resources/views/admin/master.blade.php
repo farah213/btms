@@ -30,14 +30,11 @@
                                 User List
                                 
                             </a>
-                             <a class="nav-link collapsed" href="{{route('locationform')}}" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Location
-                                
+                                 
                             </a>
                             <a class="nav-link collapsed" href="{{route('locationlist')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Location list
+                                Location 
                                 
                             </a>
                             <a class="nav-link collapsed" href="{{route('bus')}}" >

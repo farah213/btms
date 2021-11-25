@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bus;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
 {
-    public function Bus()
+    public function bus()
     {
-        return view('admin.layout.bus');
+        $bus=Bus::all();
+        return view('admin.layout.bus',[
+            'bus'=>$bus
+        ]);
     }
     
     public function addbusinfo()
@@ -19,15 +23,16 @@ class BusController extends Controller
 
     public function store(Request $request)
     {
-       
+    
 
         Bus::create([
-            'bus_name' =>$request->input('name'),
-            'bus_type' =>$request->input('type'),
+            'name' =>$request->input('name'),
+            'type' =>$request->input('type'),
             'bus_from' =>$request->input('bus_from'),
             'bus_to' =>$request->input('bus_to'),
-            'price' =>$request->input('bus_price'),             
+            'bus_price' =>$request->input('bus_price'),             
          ]);
+         return redirect()->back();
     }
 
 }

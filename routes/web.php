@@ -24,7 +24,7 @@ use App\Http\Controllers\Backend\LocationController;
 Route::get('/', [HomeController::class,'test']);
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
 //route for bus
-Route::get('/bus', [BusController::class,'Bus'])->name('bus');
+Route::get('/bus', [BusController::class,'bus'])->name('bus');
 Route::get('/add/businfo',[BusController::class,'addbusinfo'])->name('addbusinfo');
 Route::post('/store',[BusController::class,'store'])->name('store');
 
