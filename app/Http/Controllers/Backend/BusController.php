@@ -23,14 +23,25 @@ class BusController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'bus_name' =>'required',
+            'bus_type' =>'required',
+            'seat_capacity' =>'required',
+            'coach_number' =>'required',
+            'seat_availablity' =>'required',
+            'seat_number' =>'required',
+        ]);
+
     
 
         Bus::create([
-            'name' =>$request->input('name'),
-            'type' =>$request->input('type'),
-            'bus_from' =>$request->input('bus_from'),
-            'bus_to' =>$request->input('bus_to'),
-            'bus_price' =>$request->input('bus_price'),             
+            'bus_name' =>$request->input('bus_name'),
+            'bus_type' =>$request->input('bus_type'),
+            'seat_capacity' =>$request->input('seat_capacity'),
+            'coach_number' =>$request->input('coach_number'),
+            'seat_availablity' =>$request->input('seat_availablity'),
+            'seat_number' =>$request->input('seat_number'),
+                    
          ]);
          return redirect()->back();
     }

@@ -15,11 +15,14 @@ class CreateBusesTable extends Migration
     {
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('type');
-            $table->string('bus_from');
-            $table->string('bus_to');
-            $table->integer('bus_price');
+            $table->string('bus_name');
+            $table->string('bus_type');
+            $table->string('seat_capacity');
+            $table->string('coach_number');
+            $table->integer('seat_availablity');
+            $table->integer('seat_number');
+            
+
             $table->timestamps();
         });
     }

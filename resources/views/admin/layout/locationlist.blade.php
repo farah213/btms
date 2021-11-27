@@ -19,7 +19,7 @@
     
         @foreach($location as $key=>$a)
         <tr>
-          <td>{{$a->$key+1}} </td>
+          <th scope="row">{{$key+1}} </th>
           <td>{{$a->Location_name}} </td>
           <td>{{$a->To}} </td>
           

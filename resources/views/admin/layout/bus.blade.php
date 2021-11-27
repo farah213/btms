@@ -15,9 +15,11 @@
     <tr>
       <th scope="col">Bus name</th>
       <th scope="col">Bus type</th>
-      <th scope="col">Bus from</th>
-      <th scope="col">Bus to</th>
-      <th scope="col">Price</th>
+      <th scope="col">Seat capacity</th>
+      <th scope="col">Coach number</th>
+      <th scope="col">Seat availablity</th>
+      <th scope="col">Seat number</th>
+      
     </tr>
   </thead>
 
@@ -25,11 +27,12 @@
     
         @foreach($bus as $a)
         <tr>
-          <td>{{$a->name}} </td>
-          <td>{{$a->type}} </td>
-          <td>{{$a->bus_from}} </td>
-          <td>{{$a->bus_to}} </td>
-          <td>{{$a->bus_price}} </td>
+          <td>{{$a->bus_name}} </td>
+          <td>{{$a->bus_type}} </td>
+          <td>{{$a->seat_capacity}} </td>
+          <td>{{$a->coach_number}} </td>
+          <td>{{$a->seat_availablity}} </td>
+          <td>{{$a->seat_number}} </td>
           </tr>
         @endforeach
 

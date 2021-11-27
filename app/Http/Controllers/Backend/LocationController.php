@@ -28,6 +28,11 @@ class LocationController extends Controller
     public function locationstore (Request $request){
 
         {
+            $request->validate([
+               'Location_name'  =>'required' ,
+                'To'  =>'required' ,
+
+            ]);
            
    
               $locations = new Location();
