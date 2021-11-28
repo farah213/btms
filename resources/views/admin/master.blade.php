@@ -26,7 +26,7 @@
                             
 
                             <a class="nav-link collapsed" href="{{route('userform')}}" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-check"></i></div>
                                 User List
                                 
                             </a>
@@ -38,7 +38,7 @@
                                 
                             </a>
                             <a class="nav-link collapsed" href="{{route('bus')}}" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
                                 Bus
                                 
                             </a>
@@ -46,6 +46,11 @@
                             <a class="nav-link collapsed" href="{{route('bookingtable')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Booking table
+                                
+                            </a>
+                            <a class="nav-link collapsed" href="{{route('payment')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-wallet"></i></div>
+                                Payment
                                 
                             </a>
                         </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Backend\PaymentController;
 
 
 /*
@@ -38,3 +39,7 @@ Route::get('/locationlist', [LocationController::class,'locationlist'])->name('l
 
 //route for booking
 Route::get('/bookingtable', [BookingController::class,'bookingtable'])->name('bookingtable');
+
+//route for payment
+Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
+
