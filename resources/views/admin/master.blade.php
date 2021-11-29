@@ -32,9 +32,9 @@
                             </a>
                                  
                             </a>
-                            <a class="nav-link collapsed" href="{{route('locationlist')}}" >
+                            <a class="nav-link collapsed" href="{{route('routelist')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Location 
+                                Route 
                                 
                             </a>
                             <a class="nav-link collapsed" href="{{route('bus')}}" >

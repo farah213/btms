@@ -5,7 +5,7 @@ use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\UserController;
-use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\PaymentController;
 
 
@@ -28,14 +28,19 @@ Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard')
 Route::get('/bus', [BusController::class,'bus'])->name('bus');
 Route::get('/add/businfo',[BusController::class,'addbusinfo'])->name('addbusinfo');
 Route::post('/store',[BusController::class,'store'])->name('store');
+Route::get('/bus/{id}/delete',[BusController::class,'delete'])->name('bus.delete');
+Route::get('/bus/{id}/edit',[BusController::class,'edit'])->name('bus.edit'); 
+Route::post('/bus/update',[BusController::class,'update'])->name('bus.update');
+
+
 
 //route for user
 Route::get('/userform', [UserController::class, 'userform'])->name('userform');
 
 //route for location
-Route::get('/locationform',[LocationController::class,'locationform'])->name('locationform');
-Route::post('/locationstore', [LocationController::class,'locationstore'])->name('locationstore');
-Route::get('/locationlist', [LocationController::class,'locationlist'])->name('locationlist');
+Route::get('/routeform',[RouteController::class,'routeform'])->name('routeform');
+Route::post('/routestore', [RouteController::class,'routestore'])->name('routestore');
+Route::get('/routelist', [RouteController::class,'routelist'])->name('routelist');
 
 //route for booking
 Route::get('/bookingtable', [BookingController::class,'bookingtable'])->name('bookingtable');

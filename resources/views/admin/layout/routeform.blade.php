@@ -1,14 +1,14 @@
 @extends('admin.master')
 
 @section('content')
-<form method="post" action="{{route('locationstore')}}">
+<form method="post" action="{{route('routestore')}}">
 
 @csrf
-<h2>Add Location</h2><br>
+<h2>Add Route</h2><br>
 
   <div class="form-group">
     <label for="name"> From</label>
-<input type="text" class="form-control"  required id="Location_name" name="Location_name"placeholder="name">
+<input type="text" class="form-control"  required id="Route_name" name="Route_name"placeholder="name">
   </div><br>
 
   <div class="form-group">

@@ -13,26 +13,33 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Bus name</th>
       <th scope="col">Bus type</th>
       <th scope="col">Seat capacity</th>
       <th scope="col">Coach number</th>
       <th scope="col">Seat availablity</th>
       <th scope="col">Seat number</th>
+      <th scope="col">Action</th>
       
     </tr>
   </thead>
 
   <tbody>
     
-        @foreach($bus as $a)
+        @foreach($bus as $key=>$a)
         <tr>
+          <td>{{$a->key+1}}</td>
           <td>{{$a->bus_name}} </td>
           <td>{{$a->bus_type}} </td>
           <td>{{$a->seat_capacity}} </td>
           <td>{{$a->coach_number}} </td>
           <td>{{$a->seat_availablity}} </td>
           <td>{{$a->seat_number}} </td>
+          <td>
+            <a href="{{route('bus.edit',$a->id)}}">edit &rarr;</a>
+            <a href="{{route('bus.delete',$a->id)}}">delete</a>
+          </td>
           </tr>
         @endforeach
 

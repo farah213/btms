@@ -2,8 +2,8 @@
 
 @section('content')
 
-<h1>Location details</h1>
-<a class="btn btn-primary" href="{{route('locationform')}}">Add New</a>
+<h1>Route details</h1>
+<a class="btn btn-primary" href="{{route('routeform')}}">Add New</a>
 <br>
 
 <table style="width:100%">
@@ -17,10 +17,10 @@
 
  <tbody>
     
-        @foreach($location as $key=>$a)
+        @foreach($route as $key=>$a)
         <tr>
           <th scope="row">{{$key+1}} </th>
-          <td>{{$a->Location_name}} </td>
+          <td>{{$a->Route_name}} </td>
           <td>{{$a->To}} </td>
           
           </tr>
