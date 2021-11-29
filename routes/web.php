@@ -22,7 +22,7 @@ use App\Http\Controllers\Backend\PaymentController;
 
 
 
-Route::get('/', [HomeController::class,'test']);
+Route::get('/admin', [HomeController::class,'test']);
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
 //route for bus
 Route::get('/bus', [BusController::class,'bus'])->name('bus');
@@ -48,3 +48,17 @@ Route::get('/bookingtable', [BookingController::class,'bookingtable'])->name('bo
 //route for payment
 Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
 
+
+
+
+
+
+
+
+
+
+//website
+
+Route::get('/', function(){
+    return view('users.index');
+});
