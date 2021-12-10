@@ -7,6 +7,12 @@ use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Frontend\logincontroller;
+use App\Http\Controllers\Frontend\registrationcontroller;
+use App\Http\Controllers\Frontend\bookingticketcontroller;
+
+
+
 
 
 /*
@@ -60,5 +66,9 @@ Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment'
 //website
 
 Route::get('/', function(){
-    return view('users.index');
+    return view('users.master');
 });
+
+Route::get('/user/login/show',[logincontroller::class,'loginshow'])->name('loginshow');
+Route::get('/user/registration/show',[registrationcontroller::class,'registrationshow'])->name('registration');
+Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
