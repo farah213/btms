@@ -23,6 +23,7 @@
   <div class="mb-3">
     <label for="example" class="form-label">Seat-capacity</label>
     <input type="string" name="seat_capacity" value="{{$bus->seat_capacity}}" class="form-control"required >
+    
   </div>
    <div class="mb-3">
     <label for="example" class="form-label">Coach-number</label>

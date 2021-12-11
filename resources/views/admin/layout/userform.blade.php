@@ -1,9 +1,21 @@
-@extends('admin.master')
 
-@section('content')
+  
+ @extends('admin.master') 
 
-<div>
-    <h1>farah</h1>
-</div>
-@endsection
+ @section('content') 
+<h1>User details</h1>
+
+<br>
+
+<table style="width:100%">
+
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    
+ </tr>
+ 
+ 
+ @endsection 
 

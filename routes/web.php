@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Frontend\logincontroller;
 use App\Http\Controllers\Frontend\registrationcontroller;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
@@ -43,6 +44,7 @@ Route::post('/bus/update',[BusController::class,'update'])->name('bus.update');
 //route for user
 Route::get('/userform', [UserController::class, 'userform'])->name('userform');
 
+
 //route for location
 Route::get('/routeform',[RouteController::class,'routeform'])->name('routeform');
 Route::post('/routestore', [RouteController::class,'routestore'])->name('routestore');
@@ -54,7 +56,8 @@ Route::get('/bookingtable', [BookingController::class,'bookingtable'])->name('bo
 //route for payment
 Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
 
-
+//route for report
+Route::get('/report', [ReportController::class,'report'])->name('reportlist');
 
 
 

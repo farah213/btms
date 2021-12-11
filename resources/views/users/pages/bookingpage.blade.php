@@ -236,8 +236,13 @@ select:focus {
 
 											
 
-													<option value="dhaka">Dhaka</option>
-													<option value="khulna">Khulna</option>
+												    <option>Khulna</option>
+													<option>Dhaka</option>
+													<option>Rajshahi</option>
+													<option>Kushtia</option>
+													<option>Chittagong</option>
+													<option>Sylhet</option>
+													<option>Naogan</option>
 
 													
 													
@@ -250,7 +255,14 @@ select:focus {
                    <option>To</option>
                    
 
-													<option value="dhaka">Dhaka</option>
+											        <option>Khulna</option>
+											        <option>Dhaka</option>
+												    <option>Rajshahi</option>
+													<option>Kushtia</option>
+													<option>Chittagong</option>
+													<option>Sylhet</option>
+													<option>Barishal</option>
+                                                    <option>Naogan</option>
 													
 													
 													
@@ -270,7 +282,8 @@ select:focus {
                     <option value="" disabled="" selected="">Time</option>
                      
 											
-											<option ></option>
+											 <option ></option>
+
 													
                 </select> </div>
         </div>
@@ -280,7 +293,8 @@ select:focus {
                    <option>Coach Type</option>
                     
 										
-										<option></option>
+										<option value="AC">AC</option>
+                                             <option value="NON-AC">NON-AC</option>
 										
 												
                 </select> </div>

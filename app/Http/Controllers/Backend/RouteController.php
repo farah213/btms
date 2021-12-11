@@ -28,15 +28,16 @@ class RouteController extends Controller
     public function routestore (Request $request){
 
         {
+            // dd($request->all());
             $request->validate([
-               'Route_name'  =>'required' ,
+               'From'  =>'required' ,
                 'To'  =>'required' ,
 
             ]);
            
    
               $routes = new Route();
-              $routes->Route_name  = $request->input('Route_name');
+              $routes->Route_name  = $request->input('From');
               $routes->To  = $request->input('To');
               $routes->save();
    

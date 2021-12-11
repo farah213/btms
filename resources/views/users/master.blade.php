@@ -25,7 +25,7 @@
            @include('users.fixed.header')
             @include('users.fixed.footer')
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Farjana Islam Iccha</div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Tasnim Farah</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
