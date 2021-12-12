@@ -382,7 +382,7 @@ input[type=text]:placeholder {
     @endforeach
 @endif -->
 
-<form method="post" action="#">
+<form method="post" action="{{route('user.post.login')}}">
 @csrf
     <!-- Login Form -->
     <form>
@@ -391,7 +391,8 @@ input[type=text]:placeholder {
            
       <button type="submit" class="btn btn-warning" class="fadeIn fourth btn-signup">Log in</button>
     </form>
-
+<div class="border-top card-body text-center">Have an account? <a href="{{route('registration')}}">Sign in</a></div>
+    
     <!-- Remind Passowrd -->
 
 

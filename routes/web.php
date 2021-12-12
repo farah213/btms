@@ -70,8 +70,12 @@ Route::get('/report', [ReportController::class,'report'])->name('reportlist');
 
 Route::get('/', function(){
     return view('users.master');
-});
+})->name('frontend.user');
 
 Route::get('/user/login/show',[logincontroller::class,'loginshow'])->name('loginshow');
 Route::get('/user/registration/show',[registrationcontroller::class,'registrationshow'])->name('registration');
 Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
+Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('user.store');
+Route::post('/login/post',[registrationcontroller::class,'loginPost'])->name('user.post.login');
+
+

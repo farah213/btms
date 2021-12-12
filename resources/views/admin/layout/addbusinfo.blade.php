@@ -18,12 +18,12 @@
   <div class="mb-3">
     <label for="example" class="form-label">Seat-capacity</label>
     <input type="string" name="seat_capacity" class="form-control"required >
-    <option>Seat Capacity</option>
+    <!-- <option>Seat Capacity</option>
 													<option>40</option>
 													<option>35</option>
                           <option>30</option>
 
-													</select> 
+													</select>  -->
   </div>
    <div class="mb-3">
     <label for="example" class="form-label">Coach-number</label>

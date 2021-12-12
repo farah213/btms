@@ -118,7 +118,8 @@ body {
 				<div class="row">
 					<div class="booking-cta">
          
-<form method="post" action="#">
+
+  
 <!-- @csrf
 <div class="container">
 	<div class="row" style="padding: 50px 350px;">
@@ -135,7 +136,8 @@ body {
 
 
 		<main class="form-signin">
-  <form>
+  <form method="post" action="{{route('user.store')}}">
+    @csrf
     <div style="display: flex;justify-content: center;">
     <div>
         <div style="display:flex;justify-content:center;">
@@ -145,13 +147,13 @@ body {
     </div>
 </div>
     <label for="name" class="visually-hidden">First Name</label>
-    <input type="text" id="name" class="form-control" placeholder="First Name" name="name" autofocus="">
+    <input   type="text" id="name" class="form-control" placeholder="First Name" name='name' autofocus="">
 	<label for="name" class="visually-hidden">Last Name</label>
-    <input type="text" id="username" class="form-control" placeholder="Last Name" name="username" autofocus="">
+    <input type="text" id="lastname" class="form-control" placeholder="Last Name" name='lastname' autofocus="">
 	<label for="inputEmail" class="visually-hidden">Email address</label>
-    <input type="email" id="email" class="form-control" placeholder="Email address" name="email" autofocus="">
+    <input type="email" id="email" class="form-control" placeholder="Email address" name='email' autofocus="">
 	<label for="inputEmail" class="visually-hidden">Contact</label>
-    <input type="phone" id="phone" class="form-control" placeholder="Contact" name="phone" autofocus="">
+    <input type="phone" id="phone" class="form-control" placeholder="Contact" name='phone' autofocus="">
 	
 	<!-- <label for="inputEmail" class="visually-hidden">Role</label>
     <input type="role" id="role" class="form-control" placeholder="Role" name="role" autofocus=""> -->
@@ -163,6 +165,7 @@ body {
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
     
   </form>
+  
 </main>      
 		
 	</div>
