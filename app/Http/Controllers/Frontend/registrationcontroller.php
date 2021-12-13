@@ -12,7 +12,13 @@ class registrationcontroller extends Controller
     public function registrationshow()
     {
         return view('users.pages.registration');
+
     }
+      public function loginshow()
+     {
+         return view('users.pages.login');
+     }
+     
 
     public function userstore(Request $request)
     {
@@ -42,6 +48,11 @@ class registrationcontroller extends Controller
         }
         else
         return redirect()->route('loginshow');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('frontend.user');
     }
 
 }

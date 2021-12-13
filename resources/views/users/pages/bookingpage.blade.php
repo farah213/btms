@@ -252,7 +252,8 @@ select:focus {
                     
                 </select> </div>
             <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="to" name="to">
-                   <option>To</option>
+                   
+            <option>To</option>
                    
 
 											        <option>Khulna</option>
@@ -267,7 +268,8 @@ select:focus {
 													
 													
 
-                </select> </div>
+                </select> 
+           </div>
         </div>
         <!--Third Row-->
         
@@ -282,7 +284,19 @@ select:focus {
                     <option value="" disabled="" selected="">Time</option>
                      
 											
-											 <option ></option>
+											 <option >09:00 AM</option>
+                                             <option >10:00 AM</option>
+                                             <option >11:30 AM</option>
+                                             <option >12:00 PM</option>
+                                             <option >02:00 pM</option>
+                                             <option >03:00 PM</option>
+                                             <option >03:30 PM</option>
+                                             <option >05:00 PM</option>
+                                             <option >06:30 PM</option>
+                                             <option >08:00 PM</option>
+                                             <option >09:30 PM</option>
+                                            <option >10:30 PM</option>
+                                            <option >11:30 PM</option>
 
 													
                 </select> </div>

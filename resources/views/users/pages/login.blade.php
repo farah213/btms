@@ -352,10 +352,7 @@ input[type=text]:placeholder {
   <a href="#default" class="logo">User Log In</a>
   <div class="header-right">
     <a class="" href="{{url('/')}}"style="text-decoration: none">Home</a>
-    <a href="{{route('registration')}}"style="text-decoration: none">Sign In</a>
-    <a href="{{route('loginshow')}}"style="text-decoration: none">Log In</a>
-    <a href="#"style="text-decoration: none">Log Out</a>
-    <a href="#"style="text-decoration: none">Contact Us</a>
+   
     
   </div>
 </div>

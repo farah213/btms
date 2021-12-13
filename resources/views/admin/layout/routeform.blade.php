@@ -13,10 +13,10 @@
                         <option value="Route" disabled>Route</option>
                         <option >Rajshahi</option>
                         <option >Khulna</option>
-						<option >Dhaka</option>
-						<option >Kushtia</option>
-						<option >Chittagong</option>
-						<option >Barishal</option>
+						            <option >Dhaka</option>
+						            <option >Kushtia</option>
+						            <option >Chittagong</option>
+						            <option >Barishal</option>
                     </select>
 
 
@@ -29,10 +29,10 @@
                         <option value="Route" disabled>Route</option>
                         <option >Rajshahi</option>
                         <option >Khulna</option>
-						<option >Dhaka</option>
-						<option >Kushtia</option>
-						<option >Chittagong</option>
-						<option >Barishal</option>
+						            <option >Dhaka</option>
+						            <option >Kushtia</option>
+						            <option >Chittagong</option>
+						              <option >Barishal</option>
                     </select>
     
   </div><br>

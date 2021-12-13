@@ -8,7 +8,6 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\Backend\ReportController;
-use App\Http\Controllers\Frontend\logincontroller;
 use App\Http\Controllers\Frontend\registrationcontroller;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
 
@@ -72,10 +71,13 @@ Route::get('/', function(){
     return view('users.master');
 })->name('frontend.user');
 
-Route::get('/user/login/show',[logincontroller::class,'loginshow'])->name('loginshow');
-Route::get('/user/registration/show',[registrationcontroller::class,'registrationshow'])->name('registration');
-Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
-Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('user.store');
+Route::get('/user/login/show',[registrationcontroller::class,'loginshow'])->name('loginshow');
 Route::post('/login/post',[registrationcontroller::class,'loginPost'])->name('user.post.login');
+Route::get('/user/registration/show',[registrationcontroller::class,'registrationshow'])->name('registration');
+Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('user.store');
+Route::get('/user/logout',[registrationcontroller::class,'logout'])->name('user.logout');
+Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
+
+
 
 

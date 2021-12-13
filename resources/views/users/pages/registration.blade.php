@@ -98,10 +98,9 @@ body {
   <a href="#" class="logo" style="text-decoration: none">Online Bus Ticket Booking System</a>
   <div class="header-right">
     <a class="" href="{{url('/')}}" style="text-decoration: none">Home</a>
-    <a href="{{route('registration')}}"style="text-decoration: none">Sign In</a>
+    
     <a href="{{route('loginshow')}}"style="text-decoration: none">Log In</a>
-         <a href="#"style="text-decoration: none">Log Out</a>
-    <a href="#"style="text-decoration: none">Contact Us</a>
+        
     
     
   </div>
@@ -143,7 +142,7 @@ body {
         <div style="display:flex;justify-content:center;">
 			<img class="mb-4" src="https://cdn3.vectorstock.com/i/1000x1000/11/02/bus-ticket-book-online-banner-vector-27931102.jpg" alt="" width="72" height="57">
 		</div>
-    <h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
+    <h1 class="h3 mb-3 fw-normal">Registration Info</h1>
     </div>
 </div>
     <label for="name" class="visually-hidden">First Name</label>

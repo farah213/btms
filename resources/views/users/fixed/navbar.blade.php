@@ -8,9 +8,12 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('registration')}}">Sign In</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('registration')}}">Registration</a></li>
+                        @if(auth()->user())
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('user.logout')}}">Logout</a></li>
+                        @else
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('loginshow')}}">Log In</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Logout</a></li>
+                        @endif
                         <li class="nav-item"><a Contact class="nav-link js-scroll-trigger" href="#about">Contact Us</a></li>
                         
                     </ul>
