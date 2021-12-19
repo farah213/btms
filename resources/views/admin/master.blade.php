@@ -42,12 +42,29 @@
                                 Bus
                                 
                             </a>
+                            <a class="nav-link collapsed" href="{{route('counter')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
+                                Counter
+                                
+                            </a>
+                                <a class="nav-link collapsed" href="{{route('driver.details')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
+                                Driver
+                                
+                            </a>
+                             </a>
+                                <a class="nav-link collapsed" href="{{route('trip.details')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
+                                Trip
+                                
+                            </a>
                               
                             <a class="nav-link collapsed" href="{{route('bookingtable')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Booking table
                                 
                             </a>
+                               
                             <a class="nav-link collapsed" href="{{route('payment')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-wallet"></i></div>
                                 Payment

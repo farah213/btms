@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\BusController;
+use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\BookingController;
+use App\Http\Controllers\Backend\DriverController;
+use App\Http\Controllers\Backend\TripController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\PaymentController;
@@ -37,6 +40,22 @@ Route::post('/store',[BusController::class,'store'])->name('store');
 Route::get('/bus/{id}/delete',[BusController::class,'delete'])->name('bus.delete');
 Route::get('/bus/{id}/edit',[BusController::class,'edit'])->name('bus.edit'); 
 Route::post('/bus/update',[BusController::class,'update'])->name('bus.update');
+
+// route for counter
+ Route::get('/counter/form' ,[CounterController::class,'counter'])->name('counter.details');
+ Route::get('/counter' ,[CounterController::class,'counterdetails'])->name('counter');
+ Route::post('/counter/store' ,[CounterController::class,'counterstore'])->name('counter.store');
+
+//  route for driver
+Route::get('/driver/details' ,[DriverController::class,'driver'])->name('driver.details');
+Route::get('/driver/form' ,[DriverController::class,'driverform'])->name('driver.form');
+Route::post('/driver/store' ,[DriverController::class,'driverstore'])->name('driver.store');
+
+// route for trip
+Route::get('/trip/details' ,[TripController::class,'trip'])->name('trip.details');
+Route::get('/trip/form' ,[TripController::class,'tripform'])->name('trip.form');
+Route::post('/trip/store' ,[TripController::class,'tripstore'])->name('trip.store');
+
 
 
 

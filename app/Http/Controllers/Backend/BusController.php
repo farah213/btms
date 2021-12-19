@@ -74,6 +74,7 @@ class BusController extends Controller
         return redirect()->back();
 
     }
+    
 
 }
 

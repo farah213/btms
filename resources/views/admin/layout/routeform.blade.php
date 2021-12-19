@@ -17,6 +17,7 @@
 						            <option >Kushtia</option>
 						            <option >Chittagong</option>
 						            <option >Barishal</option>
+                        <option >Sylhet</option>
                     </select>
 
 
@@ -32,7 +33,8 @@
 						            <option >Dhaka</option>
 						            <option >Kushtia</option>
 						            <option >Chittagong</option>
-						              <option >Barishal</option>
+						            <option >Barishal</option>
+                        <option >Sylhet</option>
                     </select>
     
   </div><br>
