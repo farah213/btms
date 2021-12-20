@@ -9,5 +9,7 @@ class BusRoute extends Model
 {
     use HasFactory;
 
-    protected $guarded=[];
+     protected $table = 'routes';
+     protected $guarded=[];
 }
+

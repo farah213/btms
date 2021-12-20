@@ -26,13 +26,15 @@
     <select class="form-control"required id="from"name="from" >
          <option value="From" disabled>From</option>
 <option ></option>
-                                    <option >Rajshahi</option>
-                                    <option >Khulna</option>
+                       <option >Rajshahi</option>
+                       <option >Khulna</option>
 						            <option >Dhaka</option>
 						            <option >Kushtia</option>
 						            <option >Chittagong</option>
 						            <option >Barishal</option>
-                                     <option >Sylhet</option>
+                        <option >Sylhet</option>
+                        <option >Feni</option>
+                        <option >Naogan</option>
     </select>
             
   </div>
@@ -40,14 +42,16 @@
     <label for="contact">To</label>
     <select class="form-control"required id="to"name="to" >
          <option value="To" disabled>To</option>
-                                    <option ></option>
-                                    <option >Rajshahi</option>
-                                    <option >Khulna</option>
+                       <option ></option>
+                       <option >Rajshahi</option>
+                       <option >Khulna</option>
 						            <option >Dhaka</option>
 						            <option >Kushtia</option>
 						            <option >Chittagong</option>
 						            <option >Barishal</option>
-                                     <option >Sylhet</option>
+                         <option >Sylhet</option>
+                         <option >Feni</option>
+                         <option >Naogan</option>
     </select>
             
   </div>
@@ -56,10 +60,10 @@
     <select class="form-control"required id="time"name="time" >
          <option value="Time" disabled>Time</option>
               <option > </option>
-			 <option>Morning(6:00 AM)</option>
-             <option>Morning(7:00 AM)</option>
-            <option>Morning(10:00 AM)</option>
-			 <option>Afternoon(12:00 PM)</option>
+			        <option>Morning(6:00 AM)</option>
+              <option>Morning(7:00 AM)</option>
+              <option>Morning(10:00 AM)</option>
+			        <option>Afternoon(12:00 PM)</option>
               <option>Afternoon(3:00 PM)</option>
               <option>Afternoon(5:00 PM)</option>
               <option>Night(7:00 PM)</option>

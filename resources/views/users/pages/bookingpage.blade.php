@@ -184,22 +184,6 @@ select:focus {
 
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Card-->
 <div class="card shadow mb-5 bg-white rounded">
@@ -213,18 +197,7 @@ select:focus {
             <i class="fa fa-bus fa-2x" aria-hidden="true"></i>
         <hr>
         <p class="searchText"><strong>Search For Trip</strong></p>
-        <!--First Row-->
         
-        <!--Second Row-->
-        <!-- @if(session()->has('msg'))
-    <p class="alert alert-success">{{session()->get('msg')}}</p>
-@endif
-
-@if($errors->any())
-    @foreach($errors->all() as $er)
-        <p class="alert alert-danger">{{$er}}</p>
-    @endforeach
-@endif -->
 
 <form method="post" action="">
 @csrf
@@ -232,48 +205,36 @@ select:focus {
             <div class="col-sm-6"> 
             <select class="browser-default custom-select mb-4" required id="from" name="from">
                     								
-	                  <option>From</option>
+	                  <option disabled>selected from</option>
 
 											
-
-												    <option>Khulna</option>
-													<option>Dhaka</option>
-													<option>Rajshahi</option>
-													<option>Kushtia</option>
-													<option>Chittagong</option>
-													<option>Sylhet</option>
-													<option>Naogan</option>
+                                  @foreach($from as $data)
+								  <option value="{{$data->id}}">{{$data->Route_name}}</option>
+													
 
 													
-													
+									@endforeach
 												
 
-													</select>
+									</select>
                     
                 </select> </div>
             <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="to" name="to">
                    
-            <option>To</option>
+            <option disabled>To</option>
                    
-
-											        <option>Khulna</option>
-											        <option>Dhaka</option>
-												    <option>Rajshahi</option>
-													<option>Kushtia</option>
-													<option>Chittagong</option>
-													<option>Sylhet</option>
-													<option>Barishal</option>
-                                                    <option>Naogan</option>
-													
+                                   @foreach($from as $data)
+								    <option  value="{{$data->id}}">{{$data->To}}</option>
+											       
+									@endforeach				
 													
 													
 
                 </select> 
            </div>
         </div>
-        <!--Third Row-->
         
-        <!--Fourth Row-->
+
         <div class="row mt-4">
             <div class="col-sm-6"> 
             <input type="date"  class="browser-default custom-select mb-4" required id="date" name="date">
@@ -284,19 +245,15 @@ select:focus {
                     <option value="" disabled="" selected="">Time</option>
                      
 											
-											 <option >09:00 AM</option>
-                                             <option >10:00 AM</option>
-                                             <option >11:30 AM</option>
-                                             <option >12:00 PM</option>
-                                             <option >02:00 pM</option>
-                                             <option >03:00 PM</option>
-                                             <option >03:30 PM</option>
-                                             <option >05:00 PM</option>
-                                             <option >06:30 PM</option>
-                                             <option >08:00 PM</option>
-                                             <option >09:30 PM</option>
-                                            <option >10:30 PM</option>
-                                            <option >11:30 PM</option>
+											 <option>Morning(6:00 AM)</option>
+                                             <option>Morning(7:00 AM)</option>
+                                             <option>Morning(10:00 AM)</option>
+			                                 <option>Afternoon(12:00 PM)</option>
+                                             <option>Afternoon(3:00 PM)</option>
+                                             <option>Afternoon(5:00 PM)</option>
+                                             <option>Night(7:00 PM)</option>
+                                              <option>Night(8:00 PM)</option>
+                                              <option>Night(10:00 PM)</option>
 
 													
                 </select> </div>
@@ -308,7 +265,7 @@ select:focus {
                     
 										
 										<option value="AC">AC</option>
-                                             <option value="NON-AC">NON-AC</option>
+                                         <option value="NON-AC">NON-AC</option>
 										
 												
                 </select> </div>

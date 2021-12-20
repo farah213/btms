@@ -29,7 +29,8 @@ use App\Http\Controllers\Frontend\bookingticketcontroller;
 |
 */
 
-
+Route::group(['middleware'=>'auth'],function(){
+    
 
 Route::get('/admin', [HomeController::class,'test']);
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
@@ -76,6 +77,7 @@ Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment'
 
 //route for report
 Route::get('/report', [ReportController::class,'report'])->name('reportlist');
+});
 
 
 

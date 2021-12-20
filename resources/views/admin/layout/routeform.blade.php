@@ -18,6 +18,8 @@
 						            <option >Chittagong</option>
 						            <option >Barishal</option>
                         <option >Sylhet</option>
+                        <option >Feni</option>
+                        <option >Naogan</option>
                     </select>
 
 
@@ -35,6 +37,8 @@
 						            <option >Chittagong</option>
 						            <option >Barishal</option>
                         <option >Sylhet</option>
+                         <option >Feni</option>
+                         <option >Naogan</option>
                     </select>
     
   </div><br>

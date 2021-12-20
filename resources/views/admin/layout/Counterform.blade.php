@@ -15,6 +15,9 @@
                           <option>CTG-Satkania</option>
                           <option>Bandorban</option>
                           <option>Meherpur</option>
+                          <option>Madina Bus Stand</option>
+                          <option>Kashipur</option>
+
 													</select>
   </div>
   <div class="form-group">
