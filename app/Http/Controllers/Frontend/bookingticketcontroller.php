@@ -14,4 +14,7 @@ class bookingticketcontroller extends Controller
         // dd($from);
          return view('users.pages.bookingpage',compact('from'));
      }
+     public function webbusdetails(){
+         return view('users.pages.webbusdetails');
+     }
 }

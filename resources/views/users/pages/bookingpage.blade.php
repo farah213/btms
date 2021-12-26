@@ -271,6 +271,6 @@ select:focus {
                 </select> </div>
            
            
-        </div> <button class="btn btn-primary" type="submit">Search Now</button>
+        </div> <a class="btn btn-primary" href="{{route('webbusdetails')}}">Search Now</a>
     </div>
 </div>

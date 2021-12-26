@@ -98,6 +98,8 @@ Route::get('/user/registration/show',[registrationcontroller::class,'registratio
 Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('user.store');
 Route::get('/user/logout',[registrationcontroller::class,'logout'])->name('user.logout');
 Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
+Route::get('/webbusdetails/show',[bookingticketcontroller::class,'webbusdetails'])->name('webbusdetails');
+
 
 
 

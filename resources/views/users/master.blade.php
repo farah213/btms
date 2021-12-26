@@ -23,6 +23,7 @@
 
         <!-- Masthead-->
            @include('users.fixed.header')
+           @yield('content')
             @include('users.fixed.footer')
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container">Tasnim Farah</div></footer>

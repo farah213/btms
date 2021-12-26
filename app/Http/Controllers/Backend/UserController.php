@@ -13,5 +13,6 @@ class UserController extends Controller
         $data=User::all();
         return view('admin.layout.userform',compact('data'));
     }
-    
+
+     
 }
