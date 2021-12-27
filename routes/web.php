@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\BusController;
+use App\Http\Controllers\Backend\AdminLoginController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\DriverController;
@@ -29,10 +30,16 @@ use App\Http\Controllers\Frontend\bookingticketcontroller;
 |
 */
 
-Route::group(['middleware'=>'auth'],function(){
-    
 
-Route::get('/admin', [HomeController::class,'test']);
+Route::get('/admin/login', [AdminLoginController::class,'login'])->name('admin.login');
+Route::post('/admin/dologin', [AdminLoginController::class,'dologin'])->name('admin.do.login');
+
+Route::group(['middleware'=>'auth'],function(){
+ Route::get('/admin',function(){
+return view('admin.master');
+ })->name('dashboard'); 
+ Route::get('/admin/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
+Route::get('/admin/home', [HomeController::class,'test']);
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
 //route for bus
 Route::get('/bus', [BusController::class,'bus'])->name('bus');
