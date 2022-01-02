@@ -20,6 +20,7 @@ class AdminTableSeeder extends Seeder
             'email'=>'tasnimfarah14@gmail.com',
             'password'=>bcrypt('123'),
             'phone'=>'01815678899',
+            'role'=>'admin',
 
         ]);
     }

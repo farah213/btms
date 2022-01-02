@@ -19,28 +19,11 @@
 						            <option >Barishal</option>
                         <option >Sylhet</option>
                         <option >Feni</option>
-                        <option >Naogan</option>
+                        <option >Naogaon</option>
                     </select>
 
 
 													
-  </div><br>
-
-  <div class="form-group">
-    <label for="string">To</label>
-	<select name="To" id="To" required="">
-                        <option value="Route" disabled>Route</option>
-                        <option >Rajshahi</option>
-                        <option >Khulna</option>
-						            <option >Dhaka</option>
-						            <option >Kushtia</option>
-						            <option >Chittagong</option>
-						            <option >Barishal</option>
-                        <option >Sylhet</option>
-                         <option >Feni</option>
-                         <option >Naogan</option>
-                    </select>
-    
   </div><br>
 
   <button type="submit" class="btn btn-primary">Submit</button>

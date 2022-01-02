@@ -31,14 +31,14 @@ class RouteController extends Controller
             // dd($request->all());
             $request->validate([
                'From'  =>'required' ,
-                'To'  =>'required' ,
+                
 
             ]);
            
    
               $routes = new Route();
               $routes->Route_name  = $request->input('From');
-              $routes->To  = $request->input('To');
+              
               $routes->save();
    
              return redirect()->back()->with('msg','Submit Successfully.');

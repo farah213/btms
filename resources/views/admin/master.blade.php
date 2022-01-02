@@ -59,9 +59,9 @@
                                 
                             </a>
                               
-                            <a class="nav-link collapsed" href="{{route('bookingtable')}}" >
+                            <a class="nav-link collapsed" href="{{route('bookinginfo')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Booking table
+                                Booking Info
                                 
                             </a>
                                

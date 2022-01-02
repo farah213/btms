@@ -8,9 +8,9 @@ use App\Models\BusRoute;
 
 class BookingController extends Controller
 {
-    public function bookingtable()
+    public function bookinginfo()
     {
         
-        return view('admin.layout.bookingtable');
+        return view('admin.layout.bookinginfo');
     }
 }

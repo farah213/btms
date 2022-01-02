@@ -7,7 +7,9 @@ use App\Models\Trip;
 use Illuminate\Http\Request;
 
 class TripController extends Controller
+
 {
+   
     public function trip(){
         $trip=Trip::all();
         return view('admin.layout.trip',compact('trip'));
@@ -27,8 +29,6 @@ class TripController extends Controller
             'price' =>'required'
             
         ]);
-
-    
 
         Trip::create([
             'bus_name' =>$request->input('bus_name'),

@@ -14,6 +14,8 @@ use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Frontend\registrationcontroller;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
+use App\Http\Controllers\Frontend\CustomerProfilecontroller;
+
 
 
 
@@ -34,7 +36,7 @@ use App\Http\Controllers\Frontend\bookingticketcontroller;
 Route::get('/admin/login', [AdminLoginController::class,'login'])->name('admin.login');
 Route::post('/admin/dologin', [AdminLoginController::class,'dologin'])->name('admin.do.login');
 
-Route::group(['middleware'=>'auth'],function(){
+Route::group(['middleware'=>['auth','admin']],function(){
  Route::get('/admin',function(){
 return view('admin.master');
  })->name('dashboard'); 
@@ -67,6 +69,7 @@ Route::post('/trip/store' ,[TripController::class,'tripstore'])->name('trip.stor
 
 
 
+
 //route for user
 Route::get('/userform', [UserController::class, 'userform'])->name('userform');
 
@@ -77,7 +80,7 @@ Route::post('/routestore', [RouteController::class,'routestore'])->name('routest
 Route::get('/routelist', [RouteController::class,'routelist'])->name('routelist');
 
 //route for booking
-Route::get('/bookingtable', [BookingController::class,'bookingtable'])->name('bookingtable');
+Route::get('/bookinginfo', [BookingController::class,'bookinginfo'])->name('bookinginfo');
 
 //route for payment
 Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
@@ -106,6 +109,12 @@ Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('us
 Route::get('/user/logout',[registrationcontroller::class,'logout'])->name('user.logout');
 Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
 Route::get('/webbusdetails/show',[bookingticketcontroller::class,'webbusdetails'])->name('webbusdetails');
+Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetailsstore'])->name('webbusdetails.store');
+
+
+// route for customer profile
+Route::get('/customerprofile',[CustomerProfilecontroller::class,'customerprofile'])->name('customer.profile');
+
 
 
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateroutesTable extends Migration
+class AddRoleToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateroutesTable extends Migration
      */
     public function up()
     {
-        Schema::create('routes', function (Blueprint $table) {
-            $table->id();
-            $table->string('Route_name');
-             
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role',20)->default('user');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateroutesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('routes');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
