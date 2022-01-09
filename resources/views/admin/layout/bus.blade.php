@@ -3,8 +3,8 @@
 @section('content')
 
 <h1>BUS details</h1><br>
-  
-<!-- <button type="button" href="{{route('addbusinfo')}}"class="btn btn-primary btn-lg">ADD-NEW INFO</button><br> -->
+
+
 <a class="btn btn-primary" href="{{route('addbusinfo')}}">Add bus info</a>
 <br>
 

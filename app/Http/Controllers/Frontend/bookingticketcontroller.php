@@ -13,21 +13,7 @@ class bookingticketcontroller extends Controller
     
      public function bookingshow()
      {
-        
-        // $search=$request->query('search');
-        // if($search!=""){
-        //     $trip= Trip ::where('from','LIKE','%' .$search. '%')
-        //     ->where('to','LIKE','%' .$search. '%')
-        //     ->where('time','LIKE','%' .$search. '%')-get(); 
-        // }
-        // else{
-        //     $trip=Trip::all();
-        // }
-        // return view('admin.layout.trip',[
-        //     'trip'=>$trip,
-        //     'search'=>$search
-        
-    
+           
          $from = BusRoute::all();        
          return view('users.pages.bookingticket',compact('from'));
      }

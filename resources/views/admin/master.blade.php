@@ -58,6 +58,12 @@
                                 Trip
                                 
                             </a>
+                             </a>
+                                <a class="nav-link collapsed" href="{{route('seat.details')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
+                                Seat
+                                
+                            </a>
                               
                             <a class="nav-link collapsed" href="{{route('bookinginfo')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

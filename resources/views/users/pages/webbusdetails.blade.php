@@ -14,6 +14,8 @@
            <th scope="col">To </th>
            <th scope="col">Time</th>  
            <th scope="col">price</th>
+           <th scope="col">Action</th>
+
           </tr>
        </thead>
   <tbody>
@@ -27,6 +29,9 @@
             <td>{{($a->to )}}</td>
             <td>{{($a->time)}}</td>
             <td>{{($a->price)}}</td>
+            <td>
+               <a class="btn btn-primary" href="{{route('showseat.info',$a->id)}}" role="button">View seats</a>
+            </td>
           </tr>
        @endforeach
 

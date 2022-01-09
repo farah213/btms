@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\AdminLoginController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\DriverController;
+Use App\Http\Controllers\Backend\SeatController;
 use App\Http\Controllers\Backend\TripController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
@@ -15,6 +16,8 @@ use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Frontend\registrationcontroller;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
 use App\Http\Controllers\Frontend\CustomerProfilecontroller;
+use App\Http\Controllers\Frontend\ShowSeatInfoController;
+
 
 
 
@@ -66,8 +69,11 @@ Route::get('/trip/details' ,[TripController::class,'trip'])->name('trip.details'
 Route::get('/trip/form' ,[TripController::class,'tripform'])->name('trip.form');
 Route::post('/trip/store' ,[TripController::class,'tripstore'])->name('trip.store');
 
-
-
+//route for seat
+Route::get('/seat/details',[SeatController::class,'seat'])->name('seat.details');
+Route::get('/add/seatinfo',[SeatController::class,'addseatinfo'])->name('addseatinfo');
+Route::post('/store',[SeatController::class,'store'])->name('store');
+Route::get('/seat/delete/{id}',[SeatController::class,'seatdelete'])->name('seat.delete');
 
 
 //route for user
@@ -107,13 +113,17 @@ Route::post('/login/post',[registrationcontroller::class,'loginPost'])->name('us
 Route::get('/user/registration/show',[registrationcontroller::class,'registrationshow'])->name('registration');
 Route::post('/user/store',[registrationcontroller::class,'userstore'])->name('user.store');
 Route::get('/user/logout',[registrationcontroller::class,'logout'])->name('user.logout');
+// route for search bus
 Route::get('/bookingticket/show',[bookingticketcontroller::class,'bookingshow'])->name('booking');
 Route::get('/webbusdetails/show',[bookingticketcontroller::class,'webbusdetails'])->name('webbusdetails');
 Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetailsstore'])->name('webbusdetails.store');
 
+// rpute for seat info
+Route::get('/showseat/info/{id}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
 
-// route for customer profile
-Route::get('/customerprofile',[CustomerProfilecontroller::class,'customerprofile'])->name('customer.profile');
+
+
+
 
 
 
