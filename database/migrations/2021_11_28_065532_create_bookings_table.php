@@ -15,11 +15,11 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-             $table->integer('sl');
-              $table->string('from');
-               $table->string('to');
-                $table->string('coach_type');
-                $table->integer('price');
+             $table->unsignedBigInteger('user_id')->unsigned();
+             $table->foreign('user_id')->references('id')->on('users');
+             $table->unsignedBigInteger('trip_id')->unsigned();
+             $table->foreign('trip_id')->references('id')->on('trips');
+            //  $table->string('status')->default('booked');
             $table->timestamps();
         });
     }

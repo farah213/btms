@@ -166,8 +166,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-
-<!-- <body>
+<body>
 
     <div class="header">
         <a href="#" style="text-decoration: none" class="logo">Online Bus Ticket Booking System</a>
@@ -183,10 +182,12 @@
 
 
         </div>
-    </div> -->
+    </div>
 
 
 </body>
+
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Card-->
@@ -204,22 +205,24 @@
             <br>
             <br>
 
-            <form  action="#" method="GET">
-        
-                <select class="form-select" aria-label="Default select example">
-                   <option selected>select seat</option>
-                   @foreach($seat as $data)
-                   <option value="{{$data->id}}">{{$data->seat_number}}</option>
-                  @endforeach
-
-                </select>
+            <form action="{{route('user.book.ticket',$trip->id)}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Chose your seat</label>
+                    <select name="seat[]" multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>select one seat</option>
+                        @foreach($seat as $data)
+                        <option value="{{$data->id}}">{{$data->seat_number}}</option>
+                        @endforeach
+                    </select>
+                </div>
 
                 <br>
 
                 <div>
-                 <button class="btn btn-primary" type="submit">Book Now</button>   
+                    <button class="btn btn-primary" type="submit">Book Now</button>
                 </div>
 
-           </form>
+            </form>
         </div>
     </div>

@@ -120,6 +120,8 @@ Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetail
 
 // rpute for seat info
 Route::get('/showseat/info/{id}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
+Route::post('/user/buy/ticket{id}',[ShowSeatInfocontroller::class,'bookTicket'])->name('user.book.ticket');
+
 
 
 
