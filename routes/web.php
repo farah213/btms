@@ -94,6 +94,8 @@ Route::get('/bookinginfo', [BookingController::class,'bookinginfo'])->name('book
 //route for payment
 Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
 
+
+
 //route for report
 Route::get('/report', [ReportController::class,'report'])->name('reportlist');
 });
@@ -124,15 +126,17 @@ Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetail
 // rpute for seat info
 Route::get('/showseat/info/{id}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
 
-// //route for booking
-// Route::post('/user/buy/ticket{id}',[ShowSeatInfocontroller::class,'bookTicket'])->name('user.book.ticket');
-// Route::get('/showbooking/info',[ShowBookingInfoController::class,'showbookinginfo'])->name('showbooking.info');
+
 
 //route for webauth
 Route::group(['middleware'=>'handle'],function(){
 //route for booking
 Route::post('/user/buy/ticket{id}',[ShowSeatInfocontroller::class,'bookTicket'])->name('user.book.ticket');
 Route::get('/showbooking/info',[ShowBookingInfoController::class,'showbookinginfo'])->name('showbooking.info');
+//route for print
+Route::get('/print/view{id}',[ShowBookingInfoController::class,'viewinfo'])->name('view.info');
+
+
 });
 
 

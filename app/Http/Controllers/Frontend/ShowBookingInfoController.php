@@ -14,4 +14,8 @@ class ShowBookingInfoController extends Controller
         // dd(auth()->user());
         return view('users.pages.showbookinginfo',compact('details'));
     }
+     public function viewinfo($id){
+         $detail = Booking::find($id);
+         return view('users.pages.viewinfo',compact('detail'));
+     }
 }

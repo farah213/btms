@@ -167,63 +167,52 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 
-<body>
+<div style="margin-top:57px; margin-left: 61px;">
+<form class="print_order">
+        <input class="btn btn-primary"  type="button" onClick="PrintDiv();" value="Print">
+    </form>
 
-    <div class="header">
-        <a href="#" style="text-decoration: none" class="logo">Here is your booking information</a>
-        <div class="header-right">
-            <a class="" href="{{url('/')}}" style="margin-right: 15px;
-    text-decoration: none">Home</a>
-            
+    <div id="divToPrint">
 
-
-        </div>
-    </div>
-
-
-</body>
-
-<br>
-<table style="width:100%" class="table">
-
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Bus Name</th>
-      <th scope="col">Bookings seat</th> 
-     <th scope="col">Action</th> 
-
-
-    </tr>
-  </thead>
-  
-  <tbody>
-      @if($details->count()>0)
-    @foreach($details as $detail)
-    <tr>
-      <td>{{$detail->user->name}}</td>
-      <td>{{$detail->user->email}}</td>
-      <td>{{$detail->trip->bus_name}}</td>
-      <td>
-        @foreach($detail->bookings_seat as $value)
-        {{$value->seat->seat_number}}
-        @endforeach
-      </td>
-      <td>
-         <a class="btn btn-danger" href="#">Payment</a>
-         <a class="btn btn-success" href="{{route('view.info',$detail->id)}}">View</a>
-       </td>
+<h1>Booking Details</h1>
+     
+   <div style="display:flex;">
+       <h4 style="font-weight: bold; padding-right: 15px;">Passenger's Name:</h4>
+      <dd class="col-sm-9" style="font-size: 22px;">{{($detail->user->name)}}</dd>
+   </div>
+        
       
-    </tr>
-    @endforeach
+     <div style="display:flex;">
+        <h4 style="font-weight: bold; padding-right: 15px;">Email:</h4>
+         <dd class="col-sm-9"  style="font-size: 22px;"> {{($detail->user->email)}}</dd>
+        
+     </div>
+      
+      <div style="display:flex;">
+          <h4 style="font-weight: bold; padding-right: 15px;">Bus Name: </h4>
+            <dd class="col-sm-9"  style="font-size: 22px;">{{($detail->trip->bus_name)}}</dd>
+         
+      </div>
+      
+        <div style="display:flex;">
+            <h4 style="font-weight: bold; padding-right: 15px;">Seat Number:</h4>  
+             <dd class="col-sm-9"  style="font-size: 22px;">@foreach($detail->bookings_seat as $value)
+                  {{$value->seat->seat_number}}
+                   @endforeach</dd>
+                
+        </div>
+        </div>
+      
+      
+      
+     
 
-    @else
-    <tr>no ticket</tr>
-    @endif
-  </tbody>
-  
-  
-
-   
-
+<script language="javascript">
+    function PrintDiv() {
+        var divToPrint = document.getElementById('divToPrint');
+        var popupWin = window.open('', '_blank', 'width=1100,height=700');
+        popupWin.document.open();
+        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/Frontend/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
+        popupWin.document.close();
+    }
+</script>
