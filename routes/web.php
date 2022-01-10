@@ -1,22 +1,24 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\BusController;
-use App\Http\Controllers\Backend\AdminLoginController;
-use App\Http\Controllers\Backend\CounterController;
-use App\Http\Controllers\Backend\BookingController;
-use App\Http\Controllers\Backend\DriverController;
-Use App\Http\Controllers\Backend\SeatController;
+use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\TripController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RouteController;
-use App\Http\Controllers\Backend\PaymentController;
+Use App\Http\Controllers\Backend\SeatController;
+use App\Http\Controllers\Backend\DriverController;
 use App\Http\Controllers\Backend\ReportController;
+use App\Http\Controllers\Backend\BookingController;
+use App\Http\Controllers\Backend\CounterController;
+use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Backend\AdminLoginController;
 use App\Http\Controllers\Frontend\registrationcontroller;
+use App\Http\Controllers\Frontend\ShowSeatInfoController;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
 use App\Http\Controllers\Frontend\CustomerProfilecontroller;
-use App\Http\Controllers\Frontend\ShowSeatInfoController;
+use App\Http\Controllers\Frontend\ShowBookingInfoController;
 
 
 
@@ -49,7 +51,7 @@ Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard')
 //route for bus
 Route::get('/bus', [BusController::class,'bus'])->name('bus');
 Route::get('/add/businfo',[BusController::class,'addbusinfo'])->name('addbusinfo');
-Route::post('/store',[BusController::class,'store'])->name('store');
+Route::post('/businfo/store',[BusController::class,'businfostore'])->name('businfo.store');
 Route::get('/bus/{id}/delete',[BusController::class,'delete'])->name('bus.delete');
 Route::get('/bus/{id}/edit',[BusController::class,'edit'])->name('bus.edit'); 
 Route::post('/bus/update',[BusController::class,'update'])->name('bus.update');
@@ -88,6 +90,7 @@ Route::get('/routelist', [RouteController::class,'routelist'])->name('routelist'
 //route for booking
 Route::get('/bookinginfo', [BookingController::class,'bookinginfo'])->name('bookinginfo');
 
+
 //route for payment
 Route::get('/paymentinfo', [PaymentController::class,'payment'])->name('payment');
 
@@ -120,9 +123,17 @@ Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetail
 
 // rpute for seat info
 Route::get('/showseat/info/{id}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
+
+// //route for booking
+// Route::post('/user/buy/ticket{id}',[ShowSeatInfocontroller::class,'bookTicket'])->name('user.book.ticket');
+// Route::get('/showbooking/info',[ShowBookingInfoController::class,'showbookinginfo'])->name('showbooking.info');
+
+//route for webauth
+Route::group(['middleware'=>'handle'],function(){
+//route for booking
 Route::post('/user/buy/ticket{id}',[ShowSeatInfocontroller::class,'bookTicket'])->name('user.book.ticket');
-
-
+Route::get('/showbooking/info',[ShowBookingInfoController::class,'showbookinginfo'])->name('showbooking.info');
+});
 
 
 

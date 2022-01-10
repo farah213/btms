@@ -23,14 +23,14 @@ class ShowSeatInfoController extends Controller
     }
 
     public function bookTicket(Request $request,$id){
-        // dd($request->all());
+        //  dd($request->all());
         // dd($id);
         // $trip = Trip::find($id);
         $book = Booking::create([
             'user_id'=>auth()->user()->id,
             'trip_id'=>$id
         ]);
-        foreach ($request->seat as $seat) {
+        foreach ($request->seat as $seat) {     
             Bookings_seat::create([
                 'bookings_id'=>$book->id,
                 'seat_id'=>$seat

@@ -169,16 +169,11 @@
 <body>
 
     <div class="header">
-        <a href="#" style="text-decoration: none" class="logo">Online Bus Ticket Booking System</a>
+        <a href="#" style="text-decoration: none" class="logo">Choose your seats</a>
         <div class="header-right">
             <a class="" href="{{url('/')}}" style="margin-right: 15px;
     text-decoration: none">Home</a>
-            <a href="{{route('registration')}}" style="margin-right: 15px;
-    text-decoration: none">Sign In</a>
-            <a href="{{route('loginshow')}}" style="margin-right: 15px;
-    text-decoration: none">Log In</a>
-            <a href="#" style="margin-right: 15px;
-    text-decoration: none">Log Out</a>
+           
 
 
         </div>
@@ -220,7 +215,8 @@
                 <br>
 
                 <div>
-                    <button class="btn btn-primary" type="submit">Book Now</button>
+                    <button class="btn btn-primary"  type="submit">Book Now</button>
+                   <a class="btn btn-primary" href="{{route('showbooking.info')}}" role="button">view booking details</a>
                 </div>
 
             </form>

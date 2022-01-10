@@ -19,10 +19,8 @@ class CreateBusesTable extends Migration
             $table->string('bus_type');
             $table->string('seat_capacity');
             $table->string('coach_number');
-            $table->integer('seat_availablity');
-            $table->integer('seat_number');
-            
 
+            
             $table->timestamps();
         });
     }

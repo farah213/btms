@@ -21,15 +21,15 @@ class BusController extends Controller
         return view('admin.layout.addbusinfo');
     }
 
-    public function store(Request $request)
+    public function businfostore(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'bus_name' =>'required',
             'bus_type' =>'required',
             'seat_capacity' =>'required',
             'coach_number' =>'required',
-            'seat_availablity' =>'required',
-            'seat_number' =>'required',
+            
         ]);
 
     
@@ -39,8 +39,7 @@ class BusController extends Controller
             'bus_type' =>$request->input('bus_type'),
             'seat_capacity' =>$request->input('seat_capacity'),
             'coach_number' =>$request->input('coach_number'),
-            'seat_availablity' =>$request->input('seat_availablity'),
-            'seat_number' =>$request->input('seat_number'),
+            
                     
          ]);
          return redirect()->back();
@@ -60,8 +59,7 @@ class BusController extends Controller
         $bus->bus_type = $request->bus_type;
         $bus->seat_capacity = $request->seat_capacity;
         $bus->coach_number = $request->coach_number;
-        $bus->seat_availablity = $request->seat_availablity;
-        $bus->seat_number = $request->seat_number;
+        
 
         $bus->save();
         return redirect('/bus');

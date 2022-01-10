@@ -174,12 +174,7 @@
         <div class="header-right">
             <a class="" href="{{url('/')}}" style="margin-right: 15px;
     text-decoration: none">Home</a>
-            <a href="{{route('registration')}}" style="margin-right: 15px;
-    text-decoration: none">Sign In</a>
-            <a href="{{route('loginshow')}}" style="margin-right: 15px;
-    text-decoration: none">Log In</a>
-            <a href="#" style="margin-right: 15px;
-    text-decoration: none">Log Out</a>
+            
 
 
         </div>

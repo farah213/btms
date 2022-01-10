@@ -170,11 +170,11 @@
 <body>
 
     <div class="header">
-        <a href="#" style="text-decoration: none" class="logo">Bus Information</a>
+        <a href="#" style="text-decoration: none" class="logo">Here is your booking information</a>
         <div class="header-right">
             <a class="" href="{{url('/')}}" style="margin-right: 15px;
     text-decoration: none">Home</a>
-           
+            
 
 
         </div>
@@ -184,58 +184,45 @@
 </body>
 
 <br>
+<table style="width:100%" class="table">
 
-<div class="table">
-  @if($trip->count()>0)
-  <table style="width:100%">
-      <thead>
-         <tr>
-           <th scope="col">Sl</th>
-           <th scope="col">Bus Name</th>
-           <th scope="col">Bus Type</th>
-           <th scope="col">From</th>
-           <th scope="col">To </th>
-           <th scope="col">Time</th>  
-           <th scope="col">price</th>
-           <th scope="col">Action</th>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Bus Name</th>
+      <th scope="col">Bookings seat</th> 
+     <th scope="col">Action</th> 
 
-          </tr>
-       </thead>
+
+    </tr>
+  </thead>
+  
   <tbody>
-    
-       @foreach($trip as $key=>$a)
-          <tr>
-            <td>{{($key+1)}}</td>
-            <td>{{($a-> bus_name)}}</td>
-            <td>{{($a->bus_type)}} </td>
-            <td>{{($a->from)}}</td>
-            <td>{{($a->to )}}</td>
-            <td>{{($a->time)}}</td>
-            <td>{{($a->price)}}</td>
-            <td>
-               <a class="btn btn-primary" href="{{route('showseat.info',$a->id)}}" role="button">View seats</a>
-            </td>
-          </tr>
-       @endforeach
+      @if($details->count()>0)
+    @foreach($details as $detail)
+    <tr>
+      <td>{{$detail->user->name}}</td>
+      <td>{{$detail->user->email}}</td>
+      <td>{{$detail->trip->bus_name}}</td>
+      <td>
+        @foreach($detail->bookings_seat as $value)
+        {{$value->seat->seat_number}}
+        @endforeach
+      </td>
+      <td>
+         <a class="btn btn-danger" href="#">Payment</a>
+       </td>
+      
+    </tr>
+    @endforeach
 
+    @else
+    <tr>no ticket</tr>
+    @endif
   </tbody>
-</table>
-
-@else
-<p>No trip found</p>
-
-@endif
-
-</div>
+  
+  
 
    
-
-
-
-
-
-
-
-
-
 

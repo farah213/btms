@@ -29,14 +29,7 @@
     <label for="example" class="form-label">Coach-number</label>
     <input type="string" name="coach_number" value="{{$bus->coach_number}}"class="form-control"required >
   </div>
-   <div class="mb-3">
-    <label for="example" class="form-label">Seat-availability</label>
-    <input type="integer"  name="seat_availablity"value="{{$bus->seat_availablity}}" class="form-control"required >
-  </div>
-  <div class="mb-3">
-    <label for="example" class="form-label">Seat-number</label>
-    <input type="integer"  name="seat_number"value="{{$bus->seat_number}}" class="form-control"required >
-  </div>
+  
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
