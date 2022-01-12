@@ -192,12 +192,12 @@
       <th scope="col">Email</th>
       <th scope="col">Bus Name</th>
       <th scope="col">Bookings seat</th> 
-     <th scope="col">Action</th> 
+      <th scope="col">Total price</th>
+      <th scope="col">Action</th> 
 
 
     </tr>
   </thead>
-  
   <tbody>
       @if($details->count()>0)
     @foreach($details as $detail)
@@ -210,6 +210,8 @@
         {{$value->seat->seat_number}}
         @endforeach
       </td>
+      <td>{{$detail->sub_total}}</td>
+        
       <td>
          <a class="btn btn-danger" href="#">Payment</a>
          <a class="btn btn-success" href="{{route('view.info',$detail->id)}}">View</a>

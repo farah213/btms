@@ -25,11 +25,17 @@ class SeatSeeder extends Seeder
             'seat_number'=>'A4'
         ]);
         Seat::create([
+            'seat_number'=>'A4'
+        ]);
+        Seat::create([
             'seat_number'=>'B1'
         ]);
 
         Seat::create([
             'seat_number'=>'B3'
+        ]);
+        Seat::create([
+            'seat_number'=>'B4'
         ]);
         Seat::create([
             'seat_number'=>'C2'
@@ -44,6 +50,9 @@ class SeatSeeder extends Seeder
             'seat_number'=>'D3'
         ]);
         Seat::create([
+            'seat_number'=>'E1'
+        ]);
+        Seat::create([
             'seat_number'=>'E2'
         ]);
         Seat::create([
@@ -55,5 +64,15 @@ class SeatSeeder extends Seeder
         Seat::create([
             'seat_number'=>'G2'
         ]);
+        Seat::create([
+            'seat_number'=>'G3'
+        ]);
+        Seat::create([
+            'seat_number'=>'H2'
+        ]);
+        Seat::create([
+            'seat_number'=>'H4'
+        ]);
+
     }
 }

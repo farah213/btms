@@ -19,6 +19,7 @@ class CreateBookingsTable extends Migration
              $table->foreign('user_id')->references('id')->on('users');
              $table->unsignedBigInteger('trip_id')->unsigned();
              $table->foreign('trip_id')->references('id')->on('trips');
+             $table->integer('sub_total')->nullable();
             //  $table->string('status')->default('booked');
             $table->timestamps();
         });
