@@ -6,13 +6,14 @@ use App\Models\Trip;
 use App\Models\User;
 use App\Models\Bookings_seat;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Booking extends Model
 {
     protected $table = 'bookings';
     protected $guarded = [];
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     public function user(){
         return $this->belongsTo(User::class);

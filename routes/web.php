@@ -89,6 +89,7 @@ Route::get('/routelist', [RouteController::class,'routelist'])->name('routelist'
 
 //route for booking
 Route::get('/bookinginfo', [BookingController::class,'bookinginfo'])->name('bookinginfo');
+Route::get('/booking/seat/release',[BookingController::class,'bookingRelease'])->name('admin.booking.release');
 
 
 //route for payment

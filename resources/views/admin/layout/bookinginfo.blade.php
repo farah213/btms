@@ -1,6 +1,7 @@
 @extends('admin.master')
 
 @section('content')
+<a href="{{route('admin.booking.release')}}" class="btn btn-info">Release</a>
 <table class="table">
   <thead>
     <tr>
@@ -26,6 +27,7 @@
         @endforeach
       </td>
       <td>{{$detail->sub_total}}</td>
+      
 
       
       

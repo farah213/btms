@@ -206,7 +206,14 @@
             <dd class="col-sm-9"  style="font-size: 22px;">{{$detail->sub_total}}</dd>
          
       </div>
-        </div>
+
+      </div>
+         <div style="display:flex;">
+          <h4 style="font-weight: bold; padding-right: 15px;">Date: </h4>
+            <dd class="col-sm-9"  style="font-size: 22px;">{{$detail->created_at}}</dd>    
+      </div>
+
+ </div>
       
       
       

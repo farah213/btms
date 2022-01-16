@@ -193,6 +193,7 @@
       <th scope="col">Bus Name</th>
       <th scope="col">Bookings seat</th> 
       <th scope="col">Total price</th>
+      <th scope="col">Date</th>
       <th scope="col">Action</th> 
 
 
@@ -211,6 +212,8 @@
         @endforeach
       </td>
       <td>{{$detail->sub_total}}</td>
+      <td>{{$detail->created_at}}</td>
+
         
       <td>
          <a class="btn btn-danger" href="#">Payment</a>

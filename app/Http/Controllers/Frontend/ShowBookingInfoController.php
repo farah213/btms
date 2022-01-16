@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class ShowBookingInfoController extends Controller
 {
     public function showbookinginfo(){
-        $details = Booking::with('bookings_seat')->where('user_id',auth()->user()->id)->get();
+        $details = Booking::with('bookings_seat')->where('user_id',auth()->user()->id)->orderBy('id', 'DESC')->get();
         // dd($details);
         // dd(auth()->user());
         return view('users.pages.showbookinginfo',compact('details'));

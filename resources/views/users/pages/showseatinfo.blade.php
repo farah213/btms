@@ -187,16 +187,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Card-->
 <div class="card shadow mb-5 bg-white rounded">
-    <!--Card-Body-->
+    
     <div class="card-body">
-        <!--Card-Title-->
+        
         <p class="card-title text-center shadow mb-5 rounded">Seat Information</p>
         <div class="icons text-center">
             <i class="fa fa-bus fa-2x" aria-hidden="true"></i>
             <i class="fa fa-bus fa-2x" aria-hidden="true"></i>
             <i class="fa fa-bus fa-2x" aria-hidden="true"></i>
             <hr>
-            <!-- <p class="searchText"><strong>Search For Trip</strong></p> -->
+           
             <br>
             <br>
 

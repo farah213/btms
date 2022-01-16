@@ -78,7 +78,7 @@
                             </a>
                             <a class="nav-link collapsed" href="{{route('reportlist')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-wallet"></i></div>
-                                Report
+                                User bookings record
                                 
                             </a>
                         </div>
