@@ -140,7 +140,9 @@ Route::get('/print/view{id}',[ShowBookingInfoController::class,'viewinfo'])->nam
 
 
 //userpayment
-Route::get('user/payment',[UserPaymentController::class,'userpayment'])->name('user.payment');
+Route::get('user/payment/{id}',[UserPaymentController::class,'userpayment'])->name('user.payment');
+Route::post('user/payment/post/{book_id}',[UserPaymentController::class,'postPayment'])->name('user.payment.post');
+
 
 });
 

@@ -16,8 +16,10 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('booking_id');
-            $table->string('send_from'); 
-            $table->string('payment_method');
+            $table->foreignId('user_id');
+            $table->string('payment_mathod');
+            $table->string('transaction_id');
+            $table->double('amount');
             $table->timestamps();
         });
     }
