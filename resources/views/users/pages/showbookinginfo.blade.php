@@ -212,11 +212,11 @@
         @endforeach
       </td>
       <td>{{$detail->sub_total}}</td>
-      <td>{{$detail->created_at}}</td>
+      <td>{{($detail->created_at)->toDateString()}}</td>
 
-        
+    
       <td>
-         <a class="btn btn-danger" href="#">Payment</a>
+         <a class="btn btn-danger" href="{{route('user.payment')}}">Payment</a>
          <a class="btn btn-success" href="{{route('view.info',$detail->id)}}">View</a>
        </td>
       

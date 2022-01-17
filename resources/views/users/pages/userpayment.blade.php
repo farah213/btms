@@ -167,64 +167,25 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 
-<div style="margin-top:57px; margin-left: 61px;">
-<form class="print_order">
-        <input class="btn btn-primary"  type="button" onClick="PrintDiv();" value="Print">
-    </form>
+<body>
 
-    <div id="divToPrint">
+    <div class="header">
+        <a href="#" style="text-decoration: none" class="logo">Here is your booking information</a>
+        <div class="header-right">
+            <a class="" href="{{url('/')}}" style="margin-right: 15px;
+    text-decoration: none">Home</a>
+            
 
-<h1>Booking Details </h1>
-     
-   <div style="display:flex;">
-       <h4 style="font-weight: bold; padding-right: 15px;">Passenger's Name:</h4>
-      <dd class="col-sm-9" style="font-size: 22px;">{{($detail->user->name)}}</dd>
-   </div>
-        
-      
-     <div style="display:flex;">
-        <h4 style="font-weight: bold; padding-right: 15px;">Email:</h4>
-         <dd class="col-sm-9"  style="font-size: 22px;"> {{($detail->user->email)}}</dd>
-        
-     </div>
-      
-      <div style="display:flex;">
-          <h4 style="font-weight: bold; padding-right: 15px;">Bus Name: </h4>
-            <dd class="col-sm-9"  style="font-size: 22px;">{{($detail->trip->bus_name)}}</dd>
-         
-      </div>
-      
-        <div style="display:flex;">
-            <h4 style="font-weight: bold; padding-right: 15px;">Seat Number:</h4>  
-             <dd class="col-sm-9"  style="font-size: 22px;">@foreach($detail->bookings_seat as $value)
-                  {{$value->seat->seat_number}}
-                   @endforeach</dd>
-                
+
         </div>
-         <div style="display:flex;">
-          <h4 style="font-weight: bold; padding-right: 15px;">Total Price: </h4>
-            <dd class="col-sm-9"  style="font-size: 22px;">{{$detail->sub_total}}</dd>
-         
-      </div>
+    </div>
 
-      </div>
-         <div style="display:flex;">
-          <h4 style="font-weight: bold; padding-right: 15px;">Date: </h4>
-            <dd class="col-sm-9"  style="font-size: 22px;">{{($detail->created_at)->toDateString()}}</dd>    
-      </div>
+    
+</body>
 
- </div>
-      
-      
-      
-     
 
-<script language="javascript">
-    function PrintDiv() {
-        var divToPrint = document.getElementById('divToPrint');
-        var popupWin = window.open('', '_blank', 'width=1100,height=700');
-        popupWin.document.open();
-        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/Frontend/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
-        popupWin.document.close();
-    }
-</script>
+
+  
+
+   
+

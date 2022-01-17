@@ -166,6 +166,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
 <body>
 
@@ -180,7 +184,13 @@
         </div>
     </div>
 
-
+<script>
+    $(document).ready(function () {
+        $("#datepicker").datepicker({
+            minDate: 0
+        });
+    });
+</script>
 </body>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -222,7 +232,9 @@
 
                 <div class="row mt-4">
                     <div class="col-sm-6">
-                        <input type="date" class="browser-default custom-select mb-4" required id="date" name="date">
+                        <!-- <input type="date" class="browser-default custom-select mb-4" required id="date" name="date"> -->
+
+                        <p>Date: <input type="text" id="datepicker"></p>
                     </div>
                     <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="select"
                             name="time">

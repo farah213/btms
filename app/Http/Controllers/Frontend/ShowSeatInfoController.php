@@ -31,7 +31,7 @@ class ShowSeatInfoController extends Controller
 
     public function bookTicket(Request $request,$id){
         //  dd($request->all());
-        // dd($id);
+        
         $trip = Trip::find($id);
         // dd($trip->price);
         $book = Booking::create([

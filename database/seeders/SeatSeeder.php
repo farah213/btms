@@ -22,7 +22,7 @@ class SeatSeeder extends Seeder
             'seat_number'=>'A2'
         ]);
         Seat::create([
-            'seat_number'=>'A4'
+            'seat_number'=>'A3'
         ]);
         Seat::create([
             'seat_number'=>'A4'

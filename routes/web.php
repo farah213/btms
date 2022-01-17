@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontend\ShowSeatInfoController;
 use App\Http\Controllers\Frontend\bookingticketcontroller;
 use App\Http\Controllers\Frontend\CustomerProfilecontroller;
 use App\Http\Controllers\Frontend\ShowBookingInfoController;
+use App\Http\Controllers\Frontend\UserPaymentController;
 
 
 
@@ -138,7 +139,12 @@ Route::get('/showbooking/info',[ShowBookingInfoController::class,'showbookinginf
 Route::get('/print/view{id}',[ShowBookingInfoController::class,'viewinfo'])->name('view.info');
 
 
+//userpayment
+Route::get('user/payment',[UserPaymentController::class,'userpayment'])->name('user.payment');
+
 });
+
+
 
 
 

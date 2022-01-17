@@ -46,7 +46,7 @@
         @endforeach
       </td>
       <td>{{$detail->sub_total}}</td>
-      <td>{{$detail->created_at}}</td>
+      <td>{{($detail->created_at)->toDateString()}}</td>
 
 
       
