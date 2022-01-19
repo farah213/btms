@@ -216,9 +216,8 @@
 
     
       <td>
-         <a class="btn btn-danger" href="{{route('user.payment',$detail->id)}}">Payment</a>
-         <a class="btn btn-success" href="{{route('view.info',$detail->id)}}">View</a>
-       </td>
+         <a class="btn btn-danger" href="{{route('user.payment',$detail->id)}}">Payment</a>  
+        </td><a class="btn btn-success" href="{{route('view.info',$detail->id)}}">View</a>
       
     </tr>
     @endforeach

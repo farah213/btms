@@ -28,12 +28,10 @@
       <th scope="col">Bookings seat</th>
       <th scope="col">Total price</th>
       <th scope="col">Date</th>
- 
-
-
       
     </tr>
   </thead>
+  
   <tbody>
     @foreach($details as $detail)
     <tr>

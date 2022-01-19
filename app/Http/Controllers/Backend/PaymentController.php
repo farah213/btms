@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Payment;
 
 class PaymentController extends Controller
 {
     public function payment(){
-        return view('admin.layout.payment');
+        $payment = Payment::with('userRelation')->get();
+      
+    
+        return view('admin.layout.payment',compact('payment'));
     }
     
 }
