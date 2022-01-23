@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Booking;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,7 +11,18 @@ class UserPaymentController extends Controller
 {
     public function userpayment($id){
         // dd($id);
-        return view('users.pages.userpayment',compact('id'));
+        $view = true;
+        $booking = Booking::find($id);
+        $payment = Payment::where('booking_id',$id)->get();
+        // dd($payment);
+        if ($payment->isEmpty() ) {
+            $view = false;
+            return view('users.pages.userpayment',compact('id','booking','view'));
+        }else {
+            return view('users.pages.userpayment',compact('id','booking','view'));
+        }
+        
+        
     }
 
     public function postPayment(Request $request,$id){
@@ -23,6 +35,6 @@ class UserPaymentController extends Controller
             'transaction_id'=>$request->transaction_id,
             'amount'=>$request->amount,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('message','payment succesful!');
     }
 }

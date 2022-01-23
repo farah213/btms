@@ -14,5 +14,5 @@ class UserController extends Controller
         return view('admin.layout.userform',compact('data'));
     }
 
-     
+  
 }

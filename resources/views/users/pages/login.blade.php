@@ -369,6 +369,7 @@ input[type=text]:placeholder {
     <div class="fadeIn first">
       <img src="https://cdn1.iconfinder.com/data/icons/travel-and-hotel/512/bus-tickets-vouchers-travel-512.png" id="icon" alt="User Icon" />
     </div>
+      
 <!-- @if(session()->has('msg'))
     <p class="alert alert-success">{{session()->get('msg')}}</p>
 @endif

@@ -16,6 +16,7 @@
     <th scope="col">Email</th>
     <th scope="col">Contact</th>
     
+    
  </tr>
 </thead>
 <tbody>
@@ -26,6 +27,7 @@
     <td>{{$a->lastname}}</td>
     <td>{{$a->email}}</td>
     <td>{{$a->phone}}</td>
+   
     
     
  </tr>

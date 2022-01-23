@@ -23,14 +23,14 @@ class ReportController extends Controller
             $user_id = $user->pluck('id');
 
             // dd($user_id);
-            $details = Booking::where('user_id',$user_id)->get();
+            $details = Booking::where('user_id',$user_id)->orderBy('id', 'DESC')->get();
             // dd($details);
        return view('admin.layout.reportlist',compact('details'));
 
         }
 
 
-        $details = Booking::with('bookings_seat')->get();
+        $details = Booking::with('bookings_seat')->orderBy('id', 'DESC')->get();
         return view('admin.layout.reportlist',compact('details'));
     }
 

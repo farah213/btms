@@ -187,6 +187,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Card-->
 <div class="card shadow mb-5 bg-white rounded">
+    @if(session()->has('message'))
+    <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if($errors->any())
+    @foreach($errors->all() as $er)
+        <p class="alert alert-danger">{{$er}}</p>
+@endforeach
+@endif
     
     <div class="card-body">
         

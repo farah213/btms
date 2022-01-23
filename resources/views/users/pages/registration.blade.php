@@ -70,6 +70,16 @@ body {
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+      @if(session()->has('message'))
+    <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if($errors->any())
+    @foreach($errors->all() as $er)
+        <p class="alert alert-danger">{{$er}}</p>
+@endforeach
+@endif
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>Registration Here</title>

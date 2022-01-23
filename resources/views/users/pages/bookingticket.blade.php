@@ -253,14 +253,15 @@
                 </div>
                 <!--Fifth Row-->
                 <div class="row">
-                    <div class="col-sm-4"> 
+                    
+                    <!-- <div class="col-sm-4"> 
                       <select class="browser-default custom-select mb-4" reqyuired id="coach_type"
                             name="coach_type">
                             <option>Coach Type</option>
                             <option value="AC">AC</option>
                             <option value="NON-AC">NON-AC</option>
                       </select> 
-                    </div>
+                    </div> -->
                 </div> 
                 <button class="btn btn-primary" type="submit">Search</button>
   </form>

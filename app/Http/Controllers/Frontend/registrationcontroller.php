@@ -33,7 +33,7 @@ class registrationcontroller extends Controller
         'phone'=>$request->phone,
         
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('message','You are Registerd User Now');
         
     }
   

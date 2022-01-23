@@ -188,8 +188,19 @@
      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
      <!------ Include the above in your HEAD tag ---------->
 
+  
+
      <div class="container">
          <div class="row-fluid">
+                @if(session()->has('message'))
+    <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if($errors->any())
+    @foreach($errors->all() as $er)
+        <p class="alert alert-danger">{{$er}}</p>
+@endforeach
+@endif
              <form class="form-horizontal" action="{{route('user.payment.post',$id)}}" method="post">
                  @csrf
                  <fieldset>
@@ -232,14 +243,18 @@
                      <div class="control-group">
                          <label class="control-label" for="username">Amount</label>
                          <div class="controls">
-                             <input  type="number" id="amount" name="amount"
+                             <input type="number" id="amount" name="amount"
                                  placeholder="" class="input-xlarge">
                          </div>
                      </div>
                      <div class="control-group">
                          <div class="controls">
                              <button type="submit" class="btn btn-success">Pay Now</button>
+                             @if($view == true)
+                               <a class="btn btn-success" href="{{route('view.info',$booking->id)}}">View</a>
+                               @else
 
+                               @endif
                          </div>
                      </div>
 

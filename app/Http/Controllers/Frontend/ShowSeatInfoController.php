@@ -50,7 +50,7 @@ class ShowSeatInfoController extends Controller
         $book->update([
             'sub_total'=>$subtotal
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('message','your ticket booking done');
 
     }
 }

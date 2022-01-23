@@ -19,7 +19,7 @@ class AdminLoginController extends Controller
             'password'=>$request->password,
         ];
         if(Auth::attempt($userpost)){
-            return redirect()->route('dashboard');
+            return redirect()->route('dashboard')->with('message','Login succesful!');
         }
         else
         return redirect()->route('admin.login');
@@ -27,6 +27,6 @@ class AdminLoginController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('admin.login');
+        return redirect()->route('admin.login')->with('message','Logout succesful!');
     }
 }
