@@ -16,6 +16,7 @@ class ShowBookingInfoController extends Controller
     }
      public function viewinfo($id){
          $detail = Booking::find($id);
+       
          return view('users.pages.viewinfo',compact('detail'));
      }
 }

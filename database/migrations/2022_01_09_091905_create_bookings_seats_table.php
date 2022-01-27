@@ -14,12 +14,12 @@ class CreateBookingsSeatsTable extends Migration
     public function up()
     {
         Schema::create('bookings_seats', function (Blueprint $table) {
-            $table->id();
+             $table->id();
              $table->unsignedBigInteger('bookings_id')->unsigned();
              $table->foreign('bookings_id')->references('id')->on('bookings');
-              $table->unsignedBigInteger('seat_id')->unsigned();
+             $table->unsignedBigInteger('seat_id')->unsigned();
              $table->foreign('seat_id')->references('id')->on('seats');
-            $table->timestamps();
+             $table->timestamps();
         });
     }
 

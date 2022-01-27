@@ -221,6 +221,15 @@
                     </select>
                 </div>
 
+                 <div class="col-sm-6"> 
+                      <select class="browser-default custom-select mb-4" required id="counter_location" name="counter_id">
+                            <option disabled>Counter name</option>
+                            @foreach($counter_name as $data)
+                            <option value="{{$data->id}}">{{$data->counter_location}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                 <br>
 
                 <div>

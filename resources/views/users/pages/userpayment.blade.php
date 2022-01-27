@@ -205,9 +205,17 @@
              <form class="form-horizontal" action="{{route('user.payment.post',$id)}}" method="post">
                  @csrf
                  <fieldset>
-                     <div id="legend">
-                         <legend class="">Payment</legend>
+                     <div id="legend" style="display: flex; justify-content: space-between;">
+                         <p class="" style="font-weight: bold; font-size: 24px; padding-top: 10px;">Payment</p>
+                         <div style="padding-top: 10px;">
+                         <span style="padding-right: 10px;"><span style="font-weight: bold;">Bkash no:</span> +8801819373737</span>
+                         <span style="padding-right: 10px;"><span style="font-weight: bold;"> Nogod no:</span> +8801819378937</span>
+                         <span><span  style="font-weight: bold;">Rocket no:</span> +88018193784837</span>
+                         </div>
+
+
                      </div>
+                     <hr />
 
                      <!-- Name -->
                      <input hidden name="user_id" type="text" value="{{auth()->user()->id}}">
@@ -253,7 +261,7 @@
                              @if($view == true)
                                <a class="btn btn-success" href="{{route('view.info',$booking->id)}}">View</a>
                                @else
-                             <button type="submit" class="btn btn-success">Pay Now</button>
+                             <button type="submit" class="btn btn-danger" >Pay Now</button>
 
                                @endif
                          </div>

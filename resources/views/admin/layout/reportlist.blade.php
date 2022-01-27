@@ -26,7 +26,8 @@
       <th scope="col">Email</th>
       <th scope="col">Bus Name</th>
       <th scope="col">Bookings seat</th>
-      <th scope="col">Total price</th>
+      <th scope="col">Total price</th> 
+      <th scope="col">Counter Location</th>
       <th scope="col">Date</th>
       
     </tr>
@@ -44,6 +45,7 @@
         @endforeach
       </td>
       <td>{{$detail->sub_total}}</td>
+      <td>{{$detail->counter->counter_location}}</td>
       <td>{{($detail->created_at)->toDateString()}}</td>
 
 

@@ -8,6 +8,8 @@ use App\Models\Trip;
 use App\Models\Seat;
 use App\Models\Booking;
 use App\Models\Bookings_seat;
+use App\Models\Counter;
+
 
 
 
@@ -23,8 +25,9 @@ class ShowSeatInfoController extends Controller
         $seat = Seat::whereNotIn('id',$bookedSeat)->get();
         // dd($seat);
         $trip = Trip::find($id);
+        $counter_name = Counter::all();
         if ($trip) {
-            return view('users.pages.showseatinfo',compact('trip','seat'));
+            return view('users.pages.showseatinfo',compact('trip','seat','counter_name'));
 
         }
     }
@@ -36,12 +39,14 @@ class ShowSeatInfoController extends Controller
         // dd($trip->price);
         $book = Booking::create([
             'user_id'=>auth()->user()->id,
-            'trip_id'=>$id
+            'trip_id'=>$id,
+            'counter_id'=>$request->input('counter_id'),
         ]);
         foreach ($request->seat as $key=>$seat) {     
             Bookings_seat::create([
                 'bookings_id'=>$book->id,
-                'seat_id'=>$seat
+                'seat_id'=>$seat,
+                
             ]);
         }
         // dd($key+1);
