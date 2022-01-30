@@ -40,6 +40,6 @@ class TripController extends Controller
             
                     
          ]);
-         return redirect()->back();
+         return redirect()->back()->with('message', 'Trip added succesfully !');
     }
 }

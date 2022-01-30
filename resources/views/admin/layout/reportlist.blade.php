@@ -4,8 +4,11 @@
 
 <h1>User Bookings Details</h1>
 <form  action="{{route('reportlist')}}">
+
+
+
 <div class="input-group rounded mt-3 mb-2">
-  <div class="form-outline">
+ <div class="form-outline">
     <input name="search" type="search" id="form1" class="form-control" placeholder="Search" arial-level="search" arial-describedby="search-addon" />
   </div>
   <button type="submit" class="btn btn-primary">
@@ -46,7 +49,7 @@
       </td>
       <td>{{$detail->sub_total}}</td>
       <td>{{$detail->counter->counter_location}}</td>
-      <td>{{($detail->created_at)->toDateString()}}</td>
+      <td>{{$detail->date}}</td>
 
 
       

@@ -1,5 +1,16 @@
 @extends('admin.master')
 @section('content')
+
+@if(session()->has('message'))
+    <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if($errors->any())
+    @foreach($errors->all() as $er)
+        <p class="alert alert-danger">{{$er}}</p>
+@endforeach
+@endif
+
 <form method="post" action="{{route('trip.store')}}">
 @csrf
 
@@ -34,7 +45,7 @@
 						            <option >Barishal</option>
                         <option >Sylhet</option>
                         <option >Feni</option>
-                        <option >Naogan</option>
+                        <option >Naogaon</option>
     </select>
             
   </div>
@@ -51,7 +62,7 @@
 						            <option >Barishal</option>
                          <option >Sylhet</option>
                          <option >Feni</option>
-                         <option >Naogan</option>
+                         <option >Naogaon</option>
     </select>
             
   </div>

@@ -11,6 +11,7 @@
         <link href="{{url('Backend/css/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
+
     <body class="sb-nav-fixed">
         @include('admin.partials.header')
         <div id="layoutSidenav">
@@ -45,13 +46,7 @@
                             <a class="nav-link collapsed" href="{{route('counter')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
                                 Counter
-                                
-                            <!-- </a>
-                                <a class="nav-link collapsed" href="{{route('driver.details')}}" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>
-                                Driver
-                                
-                            </a> -->
+                                                            
                              </a>
                                 <a class="nav-link collapsed" href="{{route('trip.details')}}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-bus-alt"></i></div>

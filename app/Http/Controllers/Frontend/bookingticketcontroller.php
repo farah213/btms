@@ -19,13 +19,14 @@ class bookingticketcontroller extends Controller
      }
      public function webbusdetails(Request $request){
         // dd($request->all());
+        $date = $request->date;
          $from = $request->query('from');
           $to = $request->query('to');
        
         if($from && $to){
             $trip= Trip ::where('from',$from)
             ->where('to',$to)->get(); 
-             return view('users.pages.webbusdetails',compact('trip'));
+             return view('users.pages.webbusdetails',compact('trip','date'));
         }
         //  dd(request()->all());
           $trip=Trip::all();

@@ -32,6 +32,6 @@ class CounterController extends Controller
             
                     
          ]);
-         return redirect()->back();
+         return redirect()->back()->with('message','Counter added succesfully !');;
     }
 }

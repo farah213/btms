@@ -42,7 +42,7 @@ class BusController extends Controller
             
                     
          ]);
-         return redirect()->back();
+         return redirect()->back()->with('message','Bus added succesfully !');
     }
 
     public function edit($id){
@@ -62,14 +62,14 @@ class BusController extends Controller
         
 
         $bus->save();
-        return redirect('/bus');
+        return redirect('/bus')->with('message','updated information');
     }
 
     
     public function delete($id){
         $bus=Bus::find($id);
         $bus->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message','deleted information');
 
     }
     

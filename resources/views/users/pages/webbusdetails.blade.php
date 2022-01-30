@@ -213,7 +213,7 @@
             <td>{{($a->time)}}</td>
             <td>{{($a->price)}}</td>
             <td>
-               <a class="btn btn-primary" href="{{route('showseat.info',$a->id)}}" role="button">View seats</a>
+               <a class="btn btn-primary" href="{{route('showseat.info',['id'=>$a->id,'date'=>$date])}}" role="button">View seats</a>
             </td>
           </tr>
        @endforeach

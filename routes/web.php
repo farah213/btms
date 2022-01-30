@@ -126,7 +126,7 @@ Route::get('/webbusdetails/show',[bookingticketcontroller::class,'webbusdetails'
 Route::post('/webbusdetails/store',[bookingticketcontroller::class,'webbusdetailsstore'])->name('webbusdetails.store');
 
 // rpute for seat info
-Route::get('/showseat/info/{id}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
+Route::get('/showseat/info/{id}/{date}',[ShowSeatInfocontroller::class,'showseatinfo'])->name('showseat.info');
 
 
 

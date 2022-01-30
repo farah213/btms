@@ -230,6 +230,9 @@
                         </select>
                     </div>
 
+                 <div class="col-sm-6"> 
+                    <input readonly type="text" value="{{$date}}" name="date">
+                </div>
                 <br>
 
                 <div>

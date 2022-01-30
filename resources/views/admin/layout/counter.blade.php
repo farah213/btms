@@ -1,6 +1,8 @@
 @extends('admin.master')
 
 @section('content')
+
+ 
 <h2>Counter Details </h2><br>
 <a class="btn btn-primary" href="{{route('counter.details')}}">Add new</a>
 <table class="table">

@@ -1,6 +1,16 @@
 @extends('admin.master')
 
 @section('content')
+
+@if(session()->has('message'))
+    <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if($errors->any())
+    @foreach($errors->all() as $er)
+        <p class="alert alert-danger">{{$er}}</p>
+@endforeach
+@endif
 <h2>Counter Details </h2>
 <form action="{{route('counter.store')}}" method="post">
     @csrf
@@ -17,6 +27,10 @@
                           <option>Meherpur</option>
                           <option>Madina Bus Stand</option>
                           <option>Kashipur</option>
+                          <option>Rajshahi Terminal</option>
+                          <option>Naogaon Terminal</option>
+
+
 
 													</select>
   </div>

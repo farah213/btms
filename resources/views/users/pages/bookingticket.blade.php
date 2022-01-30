@@ -187,7 +187,8 @@
 <script>
     $(document).ready(function () {
         $("#datepicker").datepicker({
-            minDate: 0
+            minDate: 0,
+            dateFormat: 'yy-mm-dd'
         });
     });
 </script>
@@ -234,7 +235,7 @@
                     <div class="col-sm-6">
                         <!-- <input type="date" class="browser-default custom-select mb-4" required id="date" name="date"> -->
 
-                        <p>Date: <input type="text" id="datepicker"></p>
+                        <p>Date: <input name="date" type="text" id="datepicker"></p>
                     </div>
                     <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="select"
                             name="time">

@@ -231,7 +231,7 @@
     
     <div style="display:flex; align-items:center;">
           <h4 style="font-weight: bold; padding-right: 15px;">Date: </h4>
-            <dd class="col-sm-9"  style="font-size: 22px;">{{($detail->created_at)->toDateString()}}</dd>    
+            <dd class="col-sm-9"  style="font-size: 22px;">{{$detail->date}}</</dd>    
     </div>
 
     <div style="display:flex; align-items:center;">

@@ -12,6 +12,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('registration')}}">Registration</a></li>
                         @if(auth()->user())
+                         <span class="nav-item" style="margin-top: 31px; color: rgba(255, 255, 255, 0.5)">{{auth()->user()->name}}</span>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('user.logout')}}">Logout</a></li>
                         @else
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('loginshow')}}">Log In</a></li>

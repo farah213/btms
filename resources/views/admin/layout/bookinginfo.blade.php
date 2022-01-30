@@ -20,7 +20,7 @@
     <tr>
       <td>{{$detail->user->name}}</td>
       <td>{{$detail->user->email}}</td>
-      <td>{{$detail->trip->bus_name}}</td>
+      <td>{{$detail->trip->bus_name}}</td>      
       <td>
         @foreach($detail->bookings_seat as $value)
         {{$value->seat->seat_number}}

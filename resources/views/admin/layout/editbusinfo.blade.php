@@ -1,6 +1,7 @@
 @extends('admin.master')
 
 @section('content')
+
 <h1>Update-Bus INFO</h1>
 
 <form action="{{route('bus.update')}}" method="post">
