@@ -24,11 +24,12 @@
                         	<option>Chapainawabganj</option>
                           <option>CTG-Satkania</option>
                           <option>Bandorban</option>
-                          <option>Meherpur</option>
+                          <option>Meherpur</option>                          
                           <option>Madina Bus Stand</option>
                           <option>Kashipur</option>
                           <option>Rajshahi Terminal</option>
                           <option>Naogaon Terminal</option>
+                          <option>Noakhali Terminal</option>
 
 
 

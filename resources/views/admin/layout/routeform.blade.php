@@ -20,6 +20,9 @@
                         <option >Sylhet</option>
                         <option >Feni</option>
                         <option >Naogaon</option>
+                        <option >Tangail</option>
+                        <option >Noakhali</option>
+
                     </select>
 
 

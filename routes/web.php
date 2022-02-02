@@ -43,9 +43,11 @@ Route::get('/admin/login', [AdminLoginController::class,'login'])->name('admin.l
 Route::post('/admin/dologin', [AdminLoginController::class,'dologin'])->name('admin.do.login');
 
 Route::group(['middleware'=>['auth','admin']],function(){
- Route::get('/admin',function(){
-return view('admin.master');
- })->name('dashboard'); 
+ Route::get('/admin',[HomeController::class ,'admin'])->name('dashboard');
+ 
+//  function(){
+// return view('admin.master');
+//  })->name('dashboard'); 
  Route::get('/admin/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
 Route::get('/admin/home', [HomeController::class,'test']);
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');

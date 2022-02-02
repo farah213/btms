@@ -233,11 +233,12 @@
 
                 <div class="row mt-4">
                     <div class="col-sm-6">
-                        <!-- <input type="date" class="browser-default custom-select mb-4" required id="date" name="date"> -->
+                       
 
                         <p>Date: <input name="date" type="text" id="datepicker"></p>
                     </div>
-                    <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="select"
+
+                    <!-- <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="select"
                             name="time">
                             <option value="" disabled="" selected="">Time</option>
                             <option>Morning(6:00 AM)</option>
@@ -249,20 +250,13 @@
                             <option>Night(7:00 PM)</option>
                             <option>Night(8:00 PM)</option>
                             <option>Night(10:00 PM)</option>
-                        </select> 
-                      </div>
+                          </select> 
+                      </div> -->
                 </div>
-                <!--Fifth Row-->
+                
                 <div class="row">
                     
-                    <!-- <div class="col-sm-4"> 
-                      <select class="browser-default custom-select mb-4" reqyuired id="coach_type"
-                            name="coach_type">
-                            <option>Coach Type</option>
-                            <option value="AC">AC</option>
-                            <option value="NON-AC">NON-AC</option>
-                      </select> 
-                    </div> -->
+                   
                 </div> 
                 <button class="btn btn-primary" type="submit">Search</button>
   </form>
